@@ -29,7 +29,8 @@ const App = () => {
 
   return (
     <div className='dashboard_crypto'>
-      <h1>Dashboard de Criptomoedas</h1>
+      <h1 >Dashboard de <span className='gradient'>Criptomoedas</span></h1>
+      <div className='coin animate-bounce'>$</div>
       <SearchBar onSearch={handleSearch} />
       {loading ? (
         <p>Carregando...</p>

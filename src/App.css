@@ -53,7 +53,53 @@
 }
 
 .dashboard_crypto{
+  position: relative;
   gap: 1rem;
   display: flex;
   flex-direction: column;
+  background-color: white;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+.gradient {
+  background-image: linear-gradient(to bottom, rebeccapurple, rgb(178, 180, 70), rgb(208, 224, 64));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: black;
+  
+}
+
+input{
+  padding: 0.5rem;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+.coin{
+  position: absolute;
+  top: 50px;
+  right: 0;
+  margin: 0.8rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: rgb(179, 179, 34);
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
 }
