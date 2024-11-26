@@ -1,3 +1,14 @@
+/**
+ * Nome do arquivo: CryptoTable.jsx
+ * Data de criação: 26/11/2024
+ * Autor: Bruno Gomes
+ * Matrícula: 01683125
+ *
+ * Descrição:
+ * Componente responsável por exibir a tabela de criptomoedas com informações
+ * como nome, preço em USD e variação nas últimas 24 horas.
+ */
+
 import React from "react";
 
 const CryptoTable = ({ cryptos }) => (

@@ -1,3 +1,14 @@
+/**
+ * Nome do arquivo: App.css
+ * Data de criação: 26/11/2024
+ * Autor: Bruno Gomes
+ * Matrícula: 01683125
+ *
+ * Descrição:
+ * Arquivo de estilos do aplicativo. Contém a estilização da tabela de
+ * criptomoedas, barra de busca e layout geral.
+ */
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,4 +50,10 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.dashboard_crypto{
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
 }

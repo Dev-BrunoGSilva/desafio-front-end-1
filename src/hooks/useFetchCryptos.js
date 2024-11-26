@@ -1,3 +1,14 @@
+/**
+ * Nome do arquivo: useFetchCryptos.js
+ * Data de criação: 26/11/2024
+ * Autor: Bruno Gomes
+ * Matrícula: 01683125
+ *
+ * Descrição:
+ * Hook personalizado para buscar dados de criptomoedas usando a API CoinGecko.
+ * Retorna os dados das criptomoedas e o estado de carregamento.
+ */
+
 import { useState, useEffect } from "react";
 import axios from "axios";
 
