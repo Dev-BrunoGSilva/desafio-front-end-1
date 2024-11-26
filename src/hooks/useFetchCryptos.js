@@ -6,7 +6,7 @@
  *
  * Descrição:
  * Hook personalizado para buscar dados de criptomoedas usando a API CoinGecko.
- * Retorna os dados das criptomoedas e o estado de carregamento.
+ * Inclui gerenciamento de estados de carregamento e tratamento de erros.
  */
 
 import { useState, useEffect } from "react";
@@ -15,10 +15,13 @@ import axios from "axios";
 const useFetchCryptos = () => {
   const [cryptos, setCryptos] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setLoading(true);
+        setError(null);
         const { data } = await axios.get(
           "https://api.coingecko.com/api/v3/coins/markets",
           {
@@ -32,8 +35,9 @@ const useFetchCryptos = () => {
           }
         );
         setCryptos(data);
-      } catch (error) {
-        console.error("Erro ao buscar dados:", error);
+      } catch (err) {
+        setError("Erro ao carregar os dados. Tente novamente.");
+        console.error(err);
       } finally {
         setLoading(false);
       }
@@ -42,7 +46,7 @@ const useFetchCryptos = () => {
     fetchData();
   }, []);
 
-  return { cryptos, loading };
+  return { cryptos, loading, error };
 };
 
 export default useFetchCryptos;
